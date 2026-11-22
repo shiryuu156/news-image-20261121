@@ -4,17 +4,17 @@
 [![rank](https://make.fun/badge/news-image-20261121/shiryuu156/news-image-20261121/rank.svg)](https://make.fun/bounty/news-image-20261121/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
 [![reward](https://make.fun/badge/news-image-20261121/shiryuu156/news-image-20261121/reward.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
 
-One image that sums up Saturday 21 November 2026's world news, front-page style: Mexico captures FBI most-wanted cartel boss "El Chapo Isidro", a Russian double-tap strike hits Zelenskyy's hometown Kryvyi Rih, COP31 climate talks run into overtime, AI fears sink world markets, and Trump weighs new strikes on Iran.
+A single front-page image summing up Saturday 21 November 2026's world news: Mexico captures FBI most-wanted cartel boss "El Chapo Isidro", a Russian double-tap strike hits Zelenskyy's hometown Kryvyi Rih, COP31 climate talks run into overtime, AI fears sink world markets, and Trump weighs new strikes on Iran.
 
-## Run it
+## How to run it
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-`main.ts` copies the pre-drawn `entry.png` (1024x1024, under 1 MiB) to the output directory, so both graded runs write identical bytes. The image itself is drawn at build time by `draw.mjs` (pure Node stdlib: a built-in 5x7 bitmap font plus a hand-rolled PNG encoder, no network, no timestamps, no randomness).
+`main.ts` reads the pre-drawn `entry.png` (1024x1024, under 1 MiB) and writes it to the output directory, so both graded runs produce identical bytes. The picture itself is rendered at build time by `draw.mjs`, which uses only the Node standard library: a built-in 5x7 bitmap font, a tiny raster canvas, and a hand-rolled PNG encoder. No network, no clock, no randomness.
 
-## Stories covered (all reported 21 November 2026)
+## The day's stories (all reported 21 November 2026)
 
 - **Mexico captures "El Chapo Isidro"** — Mexican forces capture Fausto Isidro Meza Flores, a Beltran Leyva cartel boss and one of the FBI's 10 most wanted, in Guasave, Sinaloa, with help from US intelligence (AP, Reuters).
 - **Russian strike hits Kryvyi Rih** — Ballistic missiles hit Zelenskyy's hometown on Friday night: 2 killed, 60 wounded in a double-tap attack, including 6 children (AP).
